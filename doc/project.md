@@ -1,6 +1,6 @@
-# Project plan: Jakaranda Wynproegulde Proegids
+# Project plan: Jakaranda Wynproegilde Proegids
 
-The goal of this project is to create a cross-platform mobile application for members of the Jakaranda Wynproegulde. The app will act as a guide for wine tastings, serving two purposes: guiding members through a thorough wine tasting experience, and automatically scoring wines based on their evaluations, with the option for members to tweak the scores.
+The goal of this project is to create a cross-platform mobile application for members of the Jakaranda Wynproegilde. The app will act as a guide for wine tastings, serving two purposes: guiding members through a thorough wine tasting experience, and automatically scoring wines based on their evaluations, with the option for members to tweak the scores.
 
 The guild uses their own version of a 20-point scoring system, so the scoring mechanism will be somewhat different from other known systems. It will be based on the WSET evaluation system, with certain criteria contributing to their 20-point score.
 
