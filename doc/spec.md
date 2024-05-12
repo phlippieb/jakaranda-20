@@ -30,8 +30,6 @@ At the top are fields for the following basic identifiers of the wine:
 1. Vintage
 1. Freeform textfield for additional notes
 
-<!-- TODO: [Create task to] Work with guild to determine additional fields to capture - residual sugar, bolling, ABV, etc -->
-
 #### Section 2: Tasting/evaluation guide
 
 The criteria as per the WSET rubrik is shown. The criteria are subdivided into categories for appearance, nose, palate, and conclusions. For most criteria, the user picks the one option which best describes the wine. For some options, marked "pick multiple", the user can pick any (or none). Some options, when selected, open a sub-menu with further options to refine the evaluation. Some options are required for scoring purposes, and others can be elided.
@@ -70,49 +68,49 @@ Nose
 - Aroma (pick multiple): floral, fruit, vegetal, spices, wood, malolactic fermentation  
   *Aroma: blomme, vrugte, plantaardig, speserye, hout, malolaktiese gisting*    
   Picking a top-level aroma will open a menu for users to refine their evaluation, as below. For each, the user can pick multiple.  
-  <!-- TODO: Primary aromas: -->
-  - Floral: acacia, honeysuckle, lilies, malva, blossoms, rose, violet  
-    *Blomme: Akasia, kamferfoelie, lelies, malva, bloeisels, roos, viooltjie*
-  - Fruit: greenfruit , citrus, stonefruit, tropical fruit, red fruit, black fruit, dried fruit  
-    *Vrugte: groen vrugte, sitrus, steenvrug, tropiese vrug, rooi vrug, swart vrug, droë vrugte*  
-    Each option opens a further sub-menu to refine the evaluation:
-    - Green fruit: apple, pear, quince, gooseberry, grape  
-      *Groen vrugte: appel, peer, kweper, appelliefie, druif*
-    - Citrus: pomelo, lemon, lime, orange peel, lemon peel  
-      *Sitrus: pomelo, suurlemoen, lemmetjie, lemoenskil, suurlemoenskil*
-    - Stonefruit: peach, apricot, nectarine  
-      *Steenvrug: perske, appelkoos, nektarien*
-    - Tropical fruit: banana, litchi, mango, canteloupe, melon, pineapple  
-      *Tropiese vrug: piesang, lietsjie, mango, spanspek, groen spanspek (melon), pynappel*
-    - Red fruit: red currant, cranberry, blackberry, strawberry, red cherry, red plum  
-      *Rooi vrug: rooi aalbessie, bosbessie, braam, aarbei, rooi kersies, rooi pruim*
-    - Black fruit: black currant, blackberry, blueberry, black cherry, black plum  
-      *Swart vrug: Swart aalbessie (black currant), braam, bloubessie, swart kersie, swart pruim*
-    - Dried fruit: dried figs, prune, raisin, sultana, kirsch, jam, stewed fruit, pickled fruit  
-      *Droë vrugte: droë vye, pruimedant, rosyne, sultana, kirsch, konfyt, gestoofde vrugte, ingelegde vrugte.*
-  - Vegetal: green pepper, cut grass, tomato leaves, asparagus, mushrooms, compost, forest floor, farmyard, duck droppings, herbs  
-    *Plantaardig: Groenpeper, gesnyde gras, tamatieblare, aspersie, sampioene, kompos, woudvloer, plaaswerf, eendemis, kruie*  
-    Choosing "herbs" will open a sub-menu:
-      - Herbs: dill, fennel, lavender, medicinal, mint, eucalyptus  
-        *Kruie: Dille, vinkel, laventel, medisyne, ment, bloekom*
-  - Spices: white pepper, black pepper, liquirice, smoked ham  
-    *Speserye: witpeper, swartpeper, liquorice, gerookte spek*
-  <!-- TODO: Secondary aromas: -->
-  - Wood: vanilla, cloves, nutmeg, coconut, toffee (butterscotch), toast brea, cedar (pencil shavings), burnt wood, smoke, chocolate, coffee, resin  
-    *Hout: vanilla, naeltjies, neutmuskaat, klapper, toffie (butterscotch), roosterbrood, seder (potlood skaafsels) gebande hout, rook, sjokolade, koffie, harpuis*  
-  - Malo (malalactic fermentation, MLF): butter, cheese, cream  
-    *Melksuur (malolaktiese) gisting: botter, kaas, room*
-  <!-- TODO: Tersiary aromas: -->
-  - Oxidation: almond, marzipan, hazelnut, walnut, chocolate, coffee, toffee, caramel  
-    *Oksidasie: Amandel, marsepein,  haselneut, okkerneut, sjokolade, koffie, toffie, karamel*
-  - Fruit development: dried apricot, marmelade, dried apple, baked apple  
-    *Vrugte ontwikkeling: droë appelkoos, marmelade, droë appel, gebakte appel*
-  - Fruit development (red): figs, prunes, tar, dried berries, baked or cooked red fruit, fruit cake  
-    *Vrugte ontwikkeling (rooi) Vye, pruimedant, teer, droë bessies, gebakte / gekookte rooi vrug, vrugtekoek*
-  - Bottle aging (white): petrol, parafin, turpentine, cinamon, ginger, toast, nuts, straw, mushrooms, honey  
-    *Bottel veroudering (wit): petrol, paraffien, terpentyn, kaneel, gemmer, roosterbrood, neute, strooi, sampioen, heuning*
-  - Bottle aging (red): leather, forest, wet soil, mushroom, tabacco, wet leaves, compost, salted meat, bacon, farmyard  
-    *Bottelveroudering (rooi):  leer, woud, nat grond, sampioen, tabak, nat blare, kompos, sampioen, soutvleis, spek, plaaswerf*
+  Primary
+    - Floral: acacia, honeysuckle, lilies, malva, blossoms, rose, violet  
+      *Blomme: Akasia, kamferfoelie, lelies, malva, bloeisels, roos, viooltjie*
+    - Fruit: greenfruit , citrus, stonefruit, tropical fruit, red fruit, black fruit, dried fruit  
+      *Vrugte: groen vrugte, sitrus, steenvrug, tropiese vrug, rooi vrug, swart vrug, droë vrugte*  
+      Each option opens a further sub-menu to refine the evaluation:
+      - Green fruit: apple, pear, quince, gooseberry, grape  
+        *Groen vrugte: appel, peer, kweper, appelliefie, druif*
+      - Citrus: pomelo, lemon, lime, orange peel, lemon peel  
+        *Sitrus: pomelo, suurlemoen, lemmetjie, lemoenskil, suurlemoenskil*
+      - Stonefruit: peach, apricot, nectarine  
+        *Steenvrug: perske, appelkoos, nektarien*
+      - Tropical fruit: banana, litchi, mango, canteloupe, melon, pineapple  
+        *Tropiese vrug: piesang, lietsjie, mango, spanspek, groen spanspek (melon), pynappel*
+      - Red fruit: red currant, cranberry, blackberry, strawberry, red cherry, red plum  
+        *Rooi vrug: rooi aalbessie, bosbessie, braam, aarbei, rooi kersies, rooi pruim*
+      - Black fruit: black currant, blackberry, blueberry, black cherry, black plum  
+        *Swart vrug: Swart aalbessie (black currant), braam, bloubessie, swart kersie, swart pruim*
+      - Dried fruit: dried figs, prune, raisin, sultana, kirsch, jam, stewed fruit, pickled fruit  
+        *Droë vrugte: droë vye, pruimedant, rosyne, sultana, kirsch, konfyt, gestoofde vrugte, ingelegde vrugte.*
+    - Vegetal: green pepper, cut grass, tomato leaves, asparagus, mushrooms, compost, forest floor, farmyard, duck droppings, herbs  
+      *Plantaardig: Groenpeper, gesnyde gras, tamatieblare, aspersie, sampioene, kompos, woudvloer, plaaswerf, eendemis, kruie*  
+      Choosing "herbs" will open a sub-menu:
+        - Herbs: dill, fennel, lavender, medicinal, mint, eucalyptus  
+          *Kruie: Dille, vinkel, laventel, medisyne, ment, bloekom*
+    - Spices: white pepper, black pepper, liquirice, smoked ham  
+      *Speserye: witpeper, swartpeper, liquorice, gerookte spek*
+  Secondary
+    - Wood: vanilla, cloves, nutmeg, coconut, toffee (butterscotch), toast brea, cedar (pencil shavings), burnt wood, smoke, chocolate, coffee, resin  
+      *Hout: vanilla, naeltjies, neutmuskaat, klapper, toffie (butterscotch), roosterbrood, seder (potlood skaafsels) gebande hout, rook, sjokolade, koffie, harpuis*  
+    - Malo (malalactic fermentation, MLF): butter, cheese, cream  
+      *Melksuur (malolaktiese) gisting: botter, kaas, room*
+  Tertiary
+    - Oxidation: almond, marzipan, hazelnut, walnut, chocolate, coffee, toffee, caramel  
+      *Oksidasie: Amandel, marsepein,  haselneut, okkerneut, sjokolade, koffie, toffie, karamel*
+    - Fruit development: dried apricot, marmelade, dried apple, baked apple  
+      *Vrugte ontwikkeling: droë appelkoos, marmelade, droë appel, gebakte appel*
+    - Fruit development (red): figs, prunes, tar, dried berries, baked or cooked red fruit, fruit cake  
+      *Vrugte ontwikkeling (rooi) Vye, pruimedant, teer, droë bessies, gebakte / gekookte rooi vrug, vrugtekoek*
+    - Bottle aging (white): petrol, parafin, turpentine, cinamon, ginger, toast, nuts, straw, mushrooms, honey  
+      *Bottel veroudering (wit): petrol, paraffien, terpentyn, kaneel, gemmer, roosterbrood, neute, strooi, sampioen, heuning*
+    - Bottle aging (red): leather, forest, wet soil, mushroom, tabacco, wet leaves, compost, salted meat, bacon, farmyard  
+      *Bottelveroudering (rooi):  leer, woud, nat grond, sampioen, tabak, nat blare, kompos, sampioen, soutvleis, spek, plaaswerf*
 
 Palate  
 *Smaak*
@@ -130,7 +128,6 @@ Palate
   *Gewig: dun/lig, medium-, elegant/medium, vol/medium+, swaar*
 - Flavour intensity: weak/light, medium-, medium, medium+, intense/pronounced  
   *Intensiteit van geure: flou, medium-, medium, medium+, intens*
-<!-- TODO: Expand?-->
 - Flavour characteristics (pick any): fruit driven, secondary flavours, bottle aging  
   *Geurprofiel vrug gedrewe, sekondêre geure, bottel veroudering*
 - Finish: short, medium-, medium, medium+, long  
