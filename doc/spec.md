@@ -30,6 +30,12 @@ At the top are fields for the following basic identifiers of the wine:
 1. Vintage
 1. Freeform textfield for additional notes
 
+After this are more advanced fields:
+
+1. Alcohol (percent)
+1. Residual sugar (grams per liter)
+1. Total (grams per liter)
+
 #### Section 2: Tasting/evaluation guide
 
 The criteria as per the WSET rubrik is shown. The criteria are subdivided into categories for appearance, nose, palate, and conclusions. For most criteria, the user picks the one option which best describes the wine. For some options, marked "pick multiple", the user can pick any (or none). Some options, when selected, open a sub-menu with further options to refine the evaluation. Some options are required for scoring purposes, and others can be elided.
