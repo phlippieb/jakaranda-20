@@ -1,4 +1,4 @@
-# Specification - Jakaranda Wynproegulde Proegids
+# Specification - Jakaranda Wynproegilde Proegids
 
 Note: This spec only reflects the scope to be implemented for the current milestone (currently, this is milestone 1). As subsequent milestones move into scope, this spec doc will be updated.
 
