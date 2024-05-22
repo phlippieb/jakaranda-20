@@ -4,41 +4,41 @@ Note: This spec only reflects the scope to be implemented for the current milest
 
 ## Overview
 
-For the first milestone, the app simply guides users through tasting a single wine at a time. The guide is based on the WSET systematic wine tasting guide, asking users to evaluate the wine on various criteria. Some of these criteria are then factored into an automatically-calculated score. After the evaluation is complete and the score has been computed, the users can then finally tweak this score based on their overall impression of the wine on the three main dimensions, namely appearance, nose, and palate.
+For the first milestone, the app simply guides users through tasting and scoring a single wine at a time. The guide is based on the WSET systematic wine tasting guide, asking users to evaluate the wine on various criteria. Some of these criteria are then factored into an automatically-calculated score. After the evaluation is complete and the score has been computed, the users can then finally adjust this score based on their personal impression of the wine on the three main dimensions, namely appearance, nose, and palate.
 
 ## Interface description
 
-There is a single screen for the current wine evaluation. The screen is divided into sections:
+There is a single screen for the evaluation of a single wine. The screen is divided into sections:
 
 1. Wine info
-2. Tasting guide
-   - Appearance
-   - Nose
-   - Palate
-   - Conclusion
-3. Score
+1. Tasting guide
+   1. Appearance
+   1. Nose
+   1. Palate
+   1. Conclusion
+1. Score
 
-### Section 1: Wine Info
+This spec includes English and *Afrikaans* terminology for easy reference during implementation.
 
-At the top are fields for the following basic identifiers of the wine:
+### Section 1: Wine Info / *Wyn Inligting*
 
-1. Producer
-1. Name of wine
-1. Varietal or blend (just a text field)
-1. Vintage
-1. Freeform textfield for additional notes
+The **Wine Info** section presents the user with editable fields for the following basic identifiers of the wine:
+
+1. Producer / *Produsent*
+1. Name of wine / *Naam van wyn*
+1. Varietal or blend (just a text field) / *Kultivar of versnit*
+1. Vintage / *Jaar*
+1. Notes (freeform textfield) / *Notas*
 
 After this are more advanced fields:
 
-1. Alcohol (percent)
-1. Residual sugar (grams per liter)
-1. Total (grams per liter)
+1. Alcohol (percent) / *Alkohol*
+1. Residual sugar (grams per liter) / *Residuele suiker*
+1. Total acid (grams per liter) / *Totale suur*
 
-### Section 2: Tasting/evaluation guide
+### Section 2: Tasting guide / *Proegids*
 
-The criteria as per the WSET rubrik is shown. The criteria are subdivided into categories for appearance, nose, palate, and conclusions. For most criteria, the user picks the one option which best describes the wine. For some options, marked "pick multiple", the user can pick any (or none). Some options, when selected, open a sub-menu with further options to refine the evaluation. Some options are required for scoring purposes, and others can be elided.
-
-The spec includes English and *Afrikaans* terminology for easy reference.
+Criteria as per the WSET rubrik are shown here. The criteria are subdivided into categories for appearance, nose, palate, and conclusions. For most criteria, the user picks the one option which best describes the wine. For some options, marked "pick multiple", the user can pick any (or none). Some options, when selected, open a sub-menu with further options to refine the evaluation. Some options are required for scoring purposes, and others can be elided.
 
 Appearance  
 *Voorkoms*
