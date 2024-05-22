@@ -148,26 +148,24 @@ Conclusions
 
 ### Section 3: Score
 
-This section shows the wine's score on the criteria that are considered for the 20-point scoring system. As the user completes the tasting evaluation, some criteria will automatically set the corresponding criteria in this section. Any criteria which haven't been evaluated yet will receive the default score. The user can manually set the score for each criteria or the overall score, and each item can be reset to the default. Once an item has been manually edited, it will not be automatically changed until it is reset to the default.
+This section shows the wine's score on the criteria that are considered for the gild's version of the 20-point scoring system. As the user completes the tasting evaluation, some criteria will automatically set the corresponding criteria in this section. Any criteria which haven't been evaluated yet will receive the default score. The user can manually set the score for each criteria or the overall score, and each item can be reset to the default. Once an item has been manually edited, it will not be automatically changed until it is reset to the default; for example, if a user has manually added 0.5 to the "nose open" score, and then modifies the "nose intensity" evaluation in the previous section, that latter update won't override the manual score.
 
-The interface will show a subsection for category (appearance, nose, and palate), followed by the resulting overall score. Within each category subsection, the relevant criteria for scoring are shown with the awarded score (0-2, depending on the criterion). A hint will show whether the awarded score indicates an average, faulty, above-average, or excellent evaluation of the criterion. The user can modify the score with plus and minus buttons, or reset it to the default.
+The interface will show a grouping of scoring criteria for each category (appearance, nose, and palate), followed by the resulting overall score. Within each category subsection, the relevant criteria for scoring are shown with the awarded score (0-2, depending on the criterion). A hint will show whether the awarded score indicates an average, faulty, above-average, or excellent evaluation of the criterion. The user can modify the score with plus and minus buttons, or reset it to the default.
 
 The displayed categories and criteria are as follows:
 
-Appearance / *Voorkoms*
-
-Nose / *Neus*
-- Condition / *Toestand*
-- Open / *Oop*
-- Aroma / *Aroma*
-- Bouquet / *Bouquet*
-
-Palate / *Smaak*
-- Balance / *Balans*
-- Complexity / *Kompleksiteit*
-- Body / *Lyf*
-- Character / *Karakter*
-- Finish / *Nasmaak*
+1. Appearance / *Voorkoms*
+1. Nose / *Neus*
+   1. Condition / *Toestand*
+   1. Open / *Oop*
+   1. Aroma / *Aroma*
+   1. Bouquet / *Bouquet*
+1. Palate / *Smaak*
+   1. Balance / *Balans*
+   1. Complexity / *Kompleksiteit*
+   1. Body / *Lyf*
+   1. Character / *Karakter*
+   1. Finish / *Nasmaak*
 
 Final score / *Finale punt*
 
