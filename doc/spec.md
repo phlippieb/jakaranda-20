@@ -152,33 +152,54 @@ This section shows the wine's score on the criteria that are considered for the 
 
 The interface will show a grouping of scoring criteria for each category (appearance, nose, and palate), followed by the resulting overall score. Within each category subsection, the relevant criteria for scoring are shown with the awarded score (0-2, depending on the criterion). A hint will show whether the awarded score indicates an average, faulty, above-average, or excellent evaluation of the criterion. The user can modify the score with plus and minus buttons, or reset it to the default.
 
-The displayed categories and criteria are as follows:
+Each criteria will also show a short quality descriptor for the currently awarded score. Likewise, the final score will show a quality descriptor for the awarded final score. This is to help members assign an appropriate score for each criteria or for the overall score.
+
+The list below shows the category groups (1-3) and final score (4). Within each category, the criteria that contribute to the final score are listed. Under each criteria, in bullet points, are the allowed scores and the accompanying quality descriptors that are displayed when those scores are chosen; the default score has no descriptor.
 
 1. Appearance / *Voorkoms*
+   - 3: Default
+   - 2: Faulty
 1. Nose / *Neus*
    1. Condition / *Toestand*
+      - 1: Default
+      - 0: Faulty
    1. Open / *Oop*
+      - 1: Default
+      - 1.5: Very open
+      - 2: Jumping out
    1. Aroma / *Aroma*
+      - 1: Default
+      - 1.5: Complexity and/or good cultivar characteristics
+      - 2: ?
    1. Bouquet / *Bouquet*
+      - 1: Default
+      - 1.5: Complexity and/or good wood characteristincs
+      - 2: ?
 1. Palate / *Smaak*
    1. Balance / *Balans*
+      - 1: Default
+      - 0: Unbalanced
+      - 1.5: Very well balanced
    1. Complexity / *Kompleksiteit*
+      - 1: Default
+      - 1.5: Very complex
    1. Body / *Lyf*
+      - 0.5: Default
+      - 1: Very intense
    1. Character / *Karakter*
+      - 0.5: Default
+      - 1: Markedly powerful, elegant, refined, etc.
    1. Finish / *Nasmaak*
-
-Final score / *Finale punt*
-
-Each criteria shows a guide for how it should be scored (see scoring logic below). E.g. for Nose → Open, show "Add 0.5 if very open. Add 1 if wine jumps out."
-
-The final score will be accompanied by a quality descriptor
-- Below 13: Very ordinary or faulty
-- 13 - 13.5: Ordinary
-- 14 - 14.5: Average; appealing
-- 15 - 15.5: Good to very good
-- 16 - 17: Excellent; wine of distinction
-- 17.5: Outstanding
-- 18+: Superlative; top class; masterpiece
+      - 1: Default
+      - 1.5: Extended
+      - 2: Lingering
+1. Final score / *Finale punt*
+   - 13 - 13.5: Ordinary
+   - 14 - 14.5: Average; appealing
+   - 15 - 15.5: Good to very good
+   - 16 - 17: Excellent; wine of distinction
+   - 17.5: Outstanding
+   - 18+: Superlative; top class; masterpiece
 
 ## Scoring logic
 
