@@ -101,11 +101,13 @@ Nose
           *Kruie: Dille, vinkel, laventel, medisyne, ment, bloekom*
     - Spices: white pepper, black pepper, liquirice, smoked ham  
       *Speserye: witpeper, swartpeper, liquorice, gerookte spek*
+
   Secondary
     - Wood: vanilla, cloves, nutmeg, coconut, toffee (butterscotch), toast brea, cedar (pencil shavings), burnt wood, smoke, chocolate, coffee, resin  
       *Hout: vanilla, naeltjies, neutmuskaat, klapper, toffie (butterscotch), roosterbrood, seder (potlood skaafsels) gebande hout, rook, sjokolade, koffie, harpuis*  
     - Malo (malalactic fermentation, MLF): butter, cheese, cream  
       *Melksuur (malolaktiese) gisting: botter, kaas, room*
+
   Tertiary
     - Oxidation: almond, marzipan, hazelnut, walnut, chocolate, coffee, toffee, caramel  
       *Oksidasie: Amandel, marsepein,  haselneut, okkerneut, sjokolade, koffie, toffie, karamel*
@@ -146,18 +148,74 @@ Conclusions
 - Aging potential: too young, good now and can be aged, must be drank now, too old  
   *Verouderingspotensiaal: Te jonk, drink nou maar kan verouder, drink nou, oor die muur*
 
-#### Score
+#### Section 3: Score
 
-Once the tasting guide has been completed, a score out of 20 is calculated and displayed. The score is subdivided into the following categories:
+This section shows the wine's score on the criteria that are considered for the 20-point scoring system. As the user completes the tasting evaluation, some criteria will automatically set the corresponding criteria in this section. Any criteria which haven't been evaluated yet will receive the default score. The user can manually set the score for each criteria or the overall score, and each item can be reset to the default. Once an item has been manually edited, it will not be automatically changed until it is reset to the default.
 
-1. Appearance (max score: 3)
-2. Nose (max score: 7)
-3. Palate (max score: 10)
+The interface will show a subsection for category (appearance, nose, and palate), followed by the resulting overall score. Within each category subsection, the relevant criteria for scoring are shown with the awarded score (0-2, depending on the criterion). A hint will show whether the awarded score indicates an average, faulty, above-average, or excellent evaluation of the criterion. The user can modify the score with plus and minus buttons, or reset it to the default.
 
-The user can tweak the score for each category; this allows for a more intuitive scoring in the event that they do not agree with the auto-calculated score.
+The displayed categories and criteria are as follows:
 
-### Score calculation logic
+Appearance / *Voorkoms*
 
-This section describes the logic for deriving a 20-point score from the evaluation provided by the user during the WSET evaluation.
+Nose / *Neus*
+- Condition / *Toestand*
+- Open / *Oop*
+- Aroma / *Aroma*
+- Bouquet / *Bouquet*
 
-<!-- TODO: Define the logic -->
+Palate / *Smaak*
+- Balance / *Balans*
+- Complexity / *Kompleksiteit*
+- Body / *Lyf*
+- Character / *Karakter*
+- Finish / *Nasmaak*
+
+Final score / *Finale punt*
+
+Each criteria shows a guide for how it should be scored (see scoring logic below). E.g. for Nose → Open, show "Add 0.5 if very open. Add 1 if wine jumps out."
+
+The final score will be accompanied by a quality descriptor
+- Below 13: Very ordinary or faulty
+- 13 - 13.5: Ordinary
+- 14 - 14.5: Average; appealing
+- 15 - 15.5: Good to very good
+- 16 - 17: Excellent; wine of distinction
+- 17.5: Outstanding
+- 18+: Superlative; top class; masterpiece
+
+### Scoring logic
+
+A wine is scored out of 20 on a list of criteria, grouped into broad categories corresponding to those in the tasting guide. Each criterion has a default, non-zero score. When all criteria are given their default scores, the wine is considered average. Some criteria may be given a score below the default to indicate that the wine is faulty. Half-points or full points may be added to some criteria to indicate that the wine is above average or excellent with regards to those criteria.
+
+The list below shows the category groups with normal score ranges in brackets; the lower score is the default, and the higher score is the maximum possible. Faulty wines my score below the default scores.
+
+The sub-items for each category group are the individual criteria items from which scores are computed. Each item indicates its default score, and how the default should be modified according to certain evaluations. It also indicates how the score is auto-calculated from the user's evaluation in the tasting guide section.
+
+- Appearance (3): Default 3. Subtract 1 if appearance is faulty.  
+  Auto-computed from appearance clarity in evaluation: if user evaluated wine as "hazy (faulty)", subtract 1.
+-Nose (4-7)
+  - Condition: Default 1. Can subtract 1 if condition is faulty.  
+    Auto-computed from nose condition.
+  - Open: Default 1. Add 0.5 if very open. Add 1 if jumping out.  
+    Auto-computed from nose intensity in evaluation: add 0.5 for "medium" to "medium+""; add 1 for "heavy/full/pronounced".
+  - Aroma: Default 1. Add 0.5 to 1 for complexity and exemplary cultivar characteristics.  
+    Not auto-computed.
+  - Bouquet: Default 1. Add 0.5 to 1 for complexity and notable wood influence.  
+    Not auto-computed.
+- Palate (7-10)
+  - Balance: Default 1. Subtract 1 if severely unbalanced. Add 0.5 if very well balanced.  
+    Not auto-computed.
+  - Complexity: Default 1. Add 0.5 if very complex.  
+    Not auto-computed.
+  - Body: Default 0.5. Add 0.5 if very heavy.  
+    Auto-computed from palate body: add 0.5 for "heavy".
+  - Character: Default 0.5. Add 0.5 if it is notably powerful, elegant, refined.  
+    Not auto-computed.
+  - Finish: Default 1. Add 0.5 if finish is extended. Add 1 if finish is lingering.  
+    Auto-computed from palate finish: Add 0.5 for "medium" to "medium +"; add 1 for "long".
+
+The user can tweak the score for each category within the allowed range. This allows for a more intuitive scoring in the event that they do not agree with the auto-calculated score.
+
+The user can also adjust the final score.
+
