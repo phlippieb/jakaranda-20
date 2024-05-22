@@ -6,9 +6,7 @@ Note: This spec only reflects the scope to be implemented for the current milest
 
 For the first milestone, the app simply guides users through tasting a single wine at a time. The guide is based on the WSET systematic wine tasting guide, asking users to evaluate the wine on various criteria. Some of these criteria are then factored into an automatically-calculated score. After the evaluation is complete and the score has been computed, the users can then finally tweak this score based on their overall impression of the wine on the three main dimensions, namely appearance, nose, and palate.
 
-## Features
-
-### Interface description
+## Interface description
 
 There is a single screen for the current wine evaluation. The screen is divided into sections:
 
@@ -20,7 +18,7 @@ There is a single screen for the current wine evaluation. The screen is divided 
    - Conclusion
 3. Score
 
-#### Section 1: Wine Info
+### Section 1: Wine Info
 
 At the top are fields for the following basic identifiers of the wine:
 
@@ -36,7 +34,7 @@ After this are more advanced fields:
 1. Residual sugar (grams per liter)
 1. Total (grams per liter)
 
-#### Section 2: Tasting/evaluation guide
+### Section 2: Tasting/evaluation guide
 
 The criteria as per the WSET rubrik is shown. The criteria are subdivided into categories for appearance, nose, palate, and conclusions. For most criteria, the user picks the one option which best describes the wine. For some options, marked "pick multiple", the user can pick any (or none). Some options, when selected, open a sub-menu with further options to refine the evaluation. Some options are required for scoring purposes, and others can be elided.
 
@@ -148,7 +146,7 @@ Conclusions
 - Aging potential: too young, good now and can be aged, must be drank now, too old  
   *Verouderingspotensiaal: Te jonk, drink nou maar kan verouder, drink nou, oor die muur*
 
-#### Section 3: Score
+### Section 3: Score
 
 This section shows the wine's score on the criteria that are considered for the 20-point scoring system. As the user completes the tasting evaluation, some criteria will automatically set the corresponding criteria in this section. Any criteria which haven't been evaluated yet will receive the default score. The user can manually set the score for each criteria or the overall score, and each item can be reset to the default. Once an item has been manually edited, it will not be automatically changed until it is reset to the default.
 
@@ -184,7 +182,7 @@ The final score will be accompanied by a quality descriptor
 - 17.5: Outstanding
 - 18+: Superlative; top class; masterpiece
 
-### Scoring logic
+## Scoring logic
 
 A wine is scored out of 20 on a list of criteria, grouped into broad categories corresponding to those in the tasting guide. Each criterion has a default, non-zero score. When all criteria are given their default scores, the wine is considered average. Some criteria may be given a score below the default to indicate that the wine is faulty. Half-points or full points may be added to some criteria to indicate that the wine is above average or excellent with regards to those criteria.
 
