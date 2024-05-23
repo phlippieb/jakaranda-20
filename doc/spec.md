@@ -4,43 +4,41 @@ Note: This spec only reflects the scope to be implemented for the current milest
 
 ## Overview
 
-For the first milestone, the app simply guides users through tasting a single wine at a time. The guide is based on the WSET systematic wine tasting guide, asking users to evaluate the wine on various criteria. Some of these criteria are then factored into an automatically-calculated score. After the evaluation is complete and the score has been computed, the users can then finally tweak this score based on their overall impression of the wine on the three main dimensions, namely appearance, nose, and palate.
+For the first milestone, the app simply guides users through tasting and scoring a single wine at a time. The guide is based on the WSET systematic wine tasting guide, asking users to evaluate the wine on various criteria. Some of these criteria are then factored into an automatically-calculated score. After the evaluation is complete and the score has been computed, the users can then finally adjust this score based on their personal impression of the wine on the three main dimensions, namely appearance, nose, and palate.
 
-## Features
+## Interface description
 
-### Interface description
-
-There is a single screen for the current wine evaluation. The screen is divided into sections:
+There is a single screen for the evaluation of a single wine. The screen is divided into sections:
 
 1. Wine info
-2. Tasting guide
-   - Appearance
-   - Nose
-   - Palate
-   - Conclusion
-3. Score
+1. Tasting guide
+   1. Appearance
+   1. Nose
+   1. Palate
+   1. Conclusion
+1. Score
 
-#### Section 1: Wine Info
+This spec includes English and *Afrikaans* terminology for easy reference during implementation.
 
-At the top are fields for the following basic identifiers of the wine:
+### Section 1: Wine Info / *Wyn Inligting*
 
-1. Producer
-1. Name of wine
-1. Varietal or blend (just a text field)
-1. Vintage
-1. Freeform textfield for additional notes
+The **Wine Info** section presents the user with editable fields for the following basic identifiers of the wine:
+
+1. Producer / *Produsent*
+1. Name of wine / *Naam van wyn*
+1. Varietal or blend (just a text field) / *Kultivar of versnit*
+1. Vintage / *Jaar*
+1. Notes (freeform textfield) / *Notas*
 
 After this are more advanced fields:
 
-1. Alcohol (percent)
-1. Residual sugar (grams per liter)
-1. Total (grams per liter)
+1. Alcohol (percent) / *Alkohol*
+1. Residual sugar (grams per liter) / *Residuele suiker*
+1. Total acid (grams per liter) / *Totale suur*
 
-#### Section 2: Tasting/evaluation guide
+### Section 2: Tasting guide / *Proegids*
 
-The criteria as per the WSET rubrik is shown. The criteria are subdivided into categories for appearance, nose, palate, and conclusions. For most criteria, the user picks the one option which best describes the wine. For some options, marked "pick multiple", the user can pick any (or none). Some options, when selected, open a sub-menu with further options to refine the evaluation. Some options are required for scoring purposes, and others can be elided.
-
-The spec includes English and *Afrikaans* terminology for easy reference.
+Criteria as per the WSET rubrik are shown here. The criteria are subdivided into categories for appearance, nose, palate, and conclusions. For most criteria, the user picks the one option which best describes the wine. For some options, marked "pick multiple", the user can pick any (or none). Some options, when selected, open a sub-menu with further options to refine the evaluation. Some options are required for scoring purposes, and others can be elided.
 
 Appearance  
 *Voorkoms*
@@ -101,11 +99,13 @@ Nose
           *Kruie: Dille, vinkel, laventel, medisyne, ment, bloekom*
     - Spices: white pepper, black pepper, liquirice, smoked ham  
       *Speserye: witpeper, swartpeper, liquorice, gerookte spek*
+
   Secondary
     - Wood: vanilla, cloves, nutmeg, coconut, toffee (butterscotch), toast brea, cedar (pencil shavings), burnt wood, smoke, chocolate, coffee, resin  
       *Hout: vanilla, naeltjies, neutmuskaat, klapper, toffie (butterscotch), roosterbrood, seder (potlood skaafsels) gebande hout, rook, sjokolade, koffie, harpuis*  
     - Malo (malalactic fermentation, MLF): butter, cheese, cream  
       *Melksuur (malolaktiese) gisting: botter, kaas, room*
+
   Tertiary
     - Oxidation: almond, marzipan, hazelnut, walnut, chocolate, coffee, toffee, caramel  
       *Oksidasie: Amandel, marsepein,  haselneut, okkerneut, sjokolade, koffie, toffie, karamel*
@@ -146,18 +146,67 @@ Conclusions
 - Aging potential: too young, good now and can be aged, must be drank now, too old  
   *Verouderingspotensiaal: Te jonk, drink nou maar kan verouder, drink nou, oor die muur*
 
-#### Score
+### Section 3: Score
 
-Once the tasting guide has been completed, a score out of 20 is calculated and displayed. The score is subdivided into the following categories:
+This section shows the wine's score along the criteria that are considered for the gild's version of the 20-point scoring system. As the user completes the tasting evaluation in the previous section, some criteria will automatically set the corresponding criteria in this section. Any criteria which haven't been evaluated yet will receive the default score. The user can manually set the score for each criteria or the overall score, and each item can be reset to the default. Once an item has been manually edited, it will not be automatically changed until it is reset to the default; for example, if a user has manually added 0.5 to the "nose open" score, and then modifies the "nose intensity" evaluation in the previous section, that latter update won't override the manual score.
 
-1. Appearance (max score: 3)
-2. Nose (max score: 7)
-3. Palate (max score: 10)
+The scoring interface details below outline the elements of the scoring interface. 
 
-The user can tweak the score for each category; this allows for a more intuitive scoring in the event that they do not agree with the auto-calculated score.
+The score criteria are grouped into categories (1-3). In brackets next to each category is the range of normally-allowed scores, with the lower score being the default, and the highest score being the maximum allowed. A score below the default is also indicated which can be assigned if the wine is faulty with regards to the category.
 
-### Score calculation logic
+Within each category is the scoring criteria (i, ii, etc) from which the final score is computed. For each criterion, bullet points list all the allowed scores along with their quality descriptors; these are the messages that are displayed when a user assigns a specific score, to help users pick an appropriate score for each criterion. Some criteria are automatically set from the evaluation in the previous section; these mappings are noted in the bullet points. Criteria scores can be adjusted with +/- buttons and reset to the default (as per the evaluation in the previous section, if available, or to the default value for each score).
 
-This section describes the logic for deriving a 20-point score from the evaluation provided by the user during the WSET evaluation.
+Lastly, the final score (4) is computed by adding all the criteria scores together. The final score can be manually adjusted with +/- buttons or reset to the default (as computed from the score criteria). Bullet points indicate the allowed values for the final score, and the quality descriptors displayed for each final score.
 
-<!-- TODO: Define the logic -->
+#### Scoring interface details
+
+1. Appearance / *Voorkoms* (3; 2 if faulty)
+   1. Condition / *Toestand* (3; 2 if faulty)
+      - 3: Default
+      - 2: Faulty / *Foutief*
+      - Automatically set from "appearance: clarity" -- if faulty, assign 2
+1. Nose / *Neus* (4-7; 3 if faulty)
+   1. Condition / *Toestand* (1-2; 0 if faulty)
+      - 1: Default
+      - 0: Faulty / *Foutief*
+      - Automatically set from "nose: condition" -- if faulty, assign 0
+   1. Open / *Oop* (1-2)
+      - 1: Default
+      - 1.5: Very open / *Baie oop*
+      - 2: Jumping out / *Sprint uit*
+      - Automatically set from "nose: intensity" -- 1.5 for "medium" to "medium+"; 2 for "heavy/full/pronounced"
+   1. Aroma / *Aroma* (1-2)
+      - 1: Default
+      - 1.5: Complex and/or good cultivar characteristics / *Kompleks en/of goeie kultivar kenmerke*
+      - 2: ?
+   1. Bouquet / *Bouquet* (1-2)
+      - 1: Default
+      - 1.5: Complex and/or good wood characteristincs / *Kompleks en/of goeie hout kenmerke*
+      - 2: ?
+1. Palate / *Smaak* (7-10; 6 if faulty)
+   1. Balance / *Balans* (1-1.5; 0 if faulty)
+      - 1: Default
+      - 0: Unbalanced / *Ongebalanseerd*
+      - 1.5: Very well balanced / *Uitstekend gebalanseerd*
+   1. Complexity / *Kompleksiteit* (1-1.5)
+      - 1: Default
+      - 1.5: Very complex / *Baie kompleks*
+   1. Body / *Lyf* (0.5-1)
+      - 0.5: Default
+      - 1: Very intense / *Baie intens*
+      - Automatically set from "palate: body" -- 1 for "heavy"
+   1. Character / *Karakter* (0.5-1)
+      - 0.5: Default
+      - 1: Markedly powerful, elegant, refined, etc. / *Merkbaar kragtig, elegant, verfynd, ens.*
+   1. Finish / *Nasmaak* (1-2)
+      - 1: Default
+      - 1.5: Extended / *Lank*
+      - 2: Lingering / *Besonder lank*
+      - Automatically set from "palate: finish" -- 1.5 for "medium" to "medium+"; 2 for "long"
+1. Final score / *Finale punt* (14-20; <14 if faulty)
+   - 13 - 13.5: Ordinary / *Gewoon*
+   - 14 - 14.5: Average; appealing / *Gemiddeld; aangenaam*
+   - 15 - 15.5: Good to very good / *Goed to baie goed*
+   - 16 - 17: Excellent; wine of distinction / *Uitstekend*
+   - 17.5: Outstanding / *Besonders*
+   - 18+: Superlative; top class; masterpiece / *Top klas; meesterlik*
