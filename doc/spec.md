@@ -152,7 +152,7 @@ This section shows the wine's score along the criteria that are considered for t
 
 The scoring interface details below outline the elements of the scoring interface. 
 
-The score criteria are grouped into categories (1-3). 
+The score criteria are grouped into categories (1-3). In brackets next to each category is the range of normally-allowed scores, with the lower score being the default, and the highest score being the maximum allowed. A score below the default is also indicated which can be assigned if the wine is faulty with regards to the category.
 
 Within each category is the scoring criteria (i, ii, etc) from which the final score is computed. For each criterion, bullet points list all the allowed scores along with their quality descriptors; these are the messages that are displayed when a user assigns a specific score, to help users pick an appropriate score for each criterion. Some criteria are automatically set from the evaluation in the previous section; these mappings are noted in the bullet points. Criteria scores can be adjusted with +/- buttons and reset to the default (as per the evaluation in the previous section, if available, or to the default value for each score).
 
@@ -160,50 +160,50 @@ Lastly, the final score (4) is computed by adding all the criteria scores togeth
 
 #### Scoring interface details
 
-1. Appearance / *Voorkoms*
-   1. Condition / *Toestand*
+1. Appearance / *Voorkoms* (3; 2 if faulty)
+   1. Condition / *Toestand* (3; 2 if faulty)
       - 3: Default
       - 2: Faulty / *Foutief*
       - Automatically set from "appearance: clarity" -- if faulty, assign 2
-1. Nose / *Neus*
-   1. Condition / *Toestand*
+1. Nose / *Neus* (4-7; 3 if faulty)
+   1. Condition / *Toestand* (1-2; 0 if faulty)
       - 1: Default
       - 0: Faulty / *Foutief*
       - Automatically set from "nose: condition" -- if faulty, assign 0
-   1. Open / *Oop*
+   1. Open / *Oop* (1-2)
       - 1: Default
       - 1.5: Very open / *Baie oop*
       - 2: Jumping out / *Sprint uit*
       - Automatically set from "nose: intensity" -- 1.5 for "medium" to "medium+"; 2 for "heavy/full/pronounced"
-   1. Aroma / *Aroma*
+   1. Aroma / *Aroma* (1-2)
       - 1: Default
       - 1.5: Complex and/or good cultivar characteristics / *Kompleks en/of goeie kultivar kenmerke*
       - 2: ?
-   1. Bouquet / *Bouquet*
+   1. Bouquet / *Bouquet* (1-2)
       - 1: Default
       - 1.5: Complex and/or good wood characteristincs / *Kompleks en/of goeie hout kenmerke*
       - 2: ?
-1. Palate / *Smaak*
-   1. Balance / *Balans*
+1. Palate / *Smaak* (7-10; 6 if faulty)
+   1. Balance / *Balans* (1-1.5; 0 if faulty)
       - 1: Default
       - 0: Unbalanced / *Ongebalanseerd*
       - 1.5: Very well balanced / *Uitstekend gebalanseerd*
-   1. Complexity / *Kompleksiteit*
+   1. Complexity / *Kompleksiteit* (1-1.5)
       - 1: Default
       - 1.5: Very complex / *Baie kompleks*
-   1. Body / *Lyf*
+   1. Body / *Lyf* (0.5-1)
       - 0.5: Default
       - 1: Very intense / *Baie intens*
       - Automatically set from "palate: body" -- 1 for "heavy"
-   1. Character / *Karakter*
+   1. Character / *Karakter* (0.5-1)
       - 0.5: Default
       - 1: Markedly powerful, elegant, refined, etc. / *Merkbaar kragtig, elegant, verfynd, ens.*
-   1. Finish / *Nasmaak*
+   1. Finish / *Nasmaak* (1-2)
       - 1: Default
       - 1.5: Extended / *Lank*
       - 2: Lingering / *Besonder lank*
       - Automatically set from "palate: finish" -- 1.5 for "medium" to "medium+"; 2 for "long"
-1. Final score / *Finale punt*
+1. Final score / *Finale punt* (14-20; <14 if faulty)
    - 13 - 13.5: Ordinary / *Gewoon*
    - 14 - 14.5: Average; appealing / *Gemiddeld; aangenaam*
    - 15 - 15.5: Good to very good / *Goed to baie goed*
