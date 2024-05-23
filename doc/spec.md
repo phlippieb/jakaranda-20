@@ -150,56 +150,56 @@ Conclusions
 
 This section shows the wine's score on the criteria that are considered for the gild's version of the 20-point scoring system. As the user completes the tasting evaluation, some criteria will automatically set the corresponding criteria in this section. Any criteria which haven't been evaluated yet will receive the default score. The user can manually set the score for each criteria or the overall score, and each item can be reset to the default. Once an item has been manually edited, it will not be automatically changed until it is reset to the default; for example, if a user has manually added 0.5 to the "nose open" score, and then modifies the "nose intensity" evaluation in the previous section, that latter update won't override the manual score.
 
-The interface will show a grouping of scoring criteria for each category (appearance, nose, and palate), followed by the resulting overall score. Within each category subsection, the relevant criteria for scoring are shown with the awarded score (0-2, depending on the criterion). A hint will show whether the awarded score indicates an average, faulty, above-average, or excellent evaluation of the criterion. The user can modify the score with plus and minus buttons, or reset it to the default.
+The interface will show a grouping of scoring criteria for each category (appearance, nose, and palate), followed by the resulting overall score. Within each category subsection, the relevant criteria for scoring are shown with the awarded score (0-2, depending on the criterion). The user can modify the score with plus and minus buttons, or reset it to the default.
 
 Each criteria will also show a short quality descriptor for the currently awarded score. Likewise, the final score will show a quality descriptor for the awarded final score. This is to help members assign an appropriate score for each criteria or for the overall score.
 
-The list below shows the category groups (1-3) and final score (4). Within each category, the criteria that contribute to the final score are listed. Under each criteria, in bullet points, are the allowed scores and the accompanying quality descriptors that are displayed when those scores are chosen; the default score has no descriptor.
+The list below shows the category groups (1-3) and final score (4). Within each category, the criteria that contribute to the final score are listed (i, ii, etc). Under each criteria, in bullet points, are the allowed scores and the accompanying quality descriptors that are displayed when those scores are chosen; the default score has no descriptor.
 
 1. Appearance / *Voorkoms*
    - 3: Default
-   - 2: Faulty
+   - 2: Faulty / *Foutief*
 1. Nose / *Neus*
    1. Condition / *Toestand*
       - 1: Default
-      - 0: Faulty
+      - 0: Faulty / *Foutief*
    1. Open / *Oop*
       - 1: Default
-      - 1.5: Very open
-      - 2: Jumping out
+      - 1.5: Very open / *Baie oop*
+      - 2: Jumping out / *Sprint uit*
    1. Aroma / *Aroma*
       - 1: Default
-      - 1.5: Complexity and/or good cultivar characteristics
+      - 1.5: Complex and/or good cultivar characteristics / *Kompleks en/of goeie kultivar kenmerke*
       - 2: ?
    1. Bouquet / *Bouquet*
       - 1: Default
-      - 1.5: Complexity and/or good wood characteristincs
+      - 1.5: Complex and/or good wood characteristincs / *Kompleks en/of goeie hout kenmerke*
       - 2: ?
 1. Palate / *Smaak*
    1. Balance / *Balans*
       - 1: Default
-      - 0: Unbalanced
-      - 1.5: Very well balanced
+      - 0: Unbalanced / *Ongebalanseerd*
+      - 1.5: Very well balanced / *Uitstekend gebalanseerd*
    1. Complexity / *Kompleksiteit*
       - 1: Default
-      - 1.5: Very complex
+      - 1.5: Very complex / *Baie kompleks*
    1. Body / *Lyf*
       - 0.5: Default
-      - 1: Very intense
+      - 1: Very intense / *Baie intens*
    1. Character / *Karakter*
       - 0.5: Default
-      - 1: Markedly powerful, elegant, refined, etc.
+      - 1: Markedly powerful, elegant, refined, etc. / *Merkbaar kragtig, elegant, verfynd, ens.*
    1. Finish / *Nasmaak*
       - 1: Default
-      - 1.5: Extended
-      - 2: Lingering
+      - 1.5: Extended / *Lank*
+      - 2: Lingering / *Besonder lank*
 1. Final score / *Finale punt*
-   - 13 - 13.5: Ordinary
-   - 14 - 14.5: Average; appealing
-   - 15 - 15.5: Good to very good
-   - 16 - 17: Excellent; wine of distinction
-   - 17.5: Outstanding
-   - 18+: Superlative; top class; masterpiece
+   - 13 - 13.5: Ordinary / *Gewoon*
+   - 14 - 14.5: Average; appealing / *Gemiddeld; aangenaam*
+   - 15 - 15.5: Good to very good / *Goed to baie goed*
+   - 16 - 17: Excellent; wine of distinction / *Uitstekend*
+   - 17.5: Outstanding / *Besonders*
+   - 18+: Superlative; top class; masterpiece / *Top klas; meesterlik*
 
 ## Scoring logic
 
