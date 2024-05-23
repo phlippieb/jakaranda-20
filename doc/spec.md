@@ -150,11 +150,15 @@ Conclusions
 
 This section shows the wine's score on the criteria that are considered for the gild's version of the 20-point scoring system. As the user completes the tasting evaluation, some criteria will automatically set the corresponding criteria in this section. Any criteria which haven't been evaluated yet will receive the default score. The user can manually set the score for each criteria or the overall score, and each item can be reset to the default. Once an item has been manually edited, it will not be automatically changed until it is reset to the default; for example, if a user has manually added 0.5 to the "nose open" score, and then modifies the "nose intensity" evaluation in the previous section, that latter update won't override the manual score.
 
-The interface will show a grouping of scoring criteria for each category (appearance, nose, and palate), followed by the resulting overall score. Within each category subsection, the relevant criteria for scoring are shown with the awarded score (0-2, depending on the criterion). The user can modify the score with plus and minus buttons, or reset it to the default.
+The scoring interface details below outline the elements of the scoring interface. 
 
-Each criteria will also show a short quality descriptor for the currently awarded score. Likewise, the final score will show a quality descriptor for the awarded final score. This is to help members assign an appropriate score for each criteria or for the overall score.
+The score criteria are grouped into categories (1-3). 
 
-The list below shows the category groups (1-3) and final score (4). Within each category, the criteria that contribute to the final score are listed (i, ii, etc). Under each criteria, in bullet points, are the allowed scores and the accompanying quality descriptors that are displayed when those scores are chosen; the default score has no descriptor.
+Within each category is the scoring criteria (i, ii, etc) from which the final score is computed. For each criterion, bullet points list all the allowed scores along with their quality descriptors; these are the messages that are displayed when a user assigns a specific score, to help users pick an appropriate score for each criterion. Criteria scores can be adjusted with +/- buttons and reset to the default.
+
+Lastly, the final score (4) is computed by adding all the criteria scores together. The final score can be manually adjusted with +/- buttons or reset to the default (as computed from the score criteria). Bullet points indicate the allowed values for the final score, and the quality descriptors displayed for each final score.
+
+#### Scoring interface details
 
 1. Appearance / *Voorkoms*
    - 3: Default
