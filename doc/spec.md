@@ -38,7 +38,7 @@ After this are more advanced fields:
 
 ### Section 2: Tasting guide / *Proegids*
 
-Criteria as per the WSET rubrik are shown here. The criteria are subdivided into categories for appearance, nose, palate, and conclusions. For most criteria, the user picks the one option which best describes the wine. For some options, marked "pick multiple", the user can pick any (or none). Some options, when selected, open a sub-menu with further options to refine the evaluation. Some options are required for scoring purposes, and others can be elided.
+Criteria as per the WSET rubrik are shown here. The criteria are subdivided into categories for appearance, nose, palate, and conclusions. For most criteria, the user picks the one option which best describes the wine. For some options, marked "pick multiple", the user can pick any (or none). Some options, when selected, open a sub-menu with further options to refine the evaluation.
 
 Appearance  
 *Voorkoms*
