@@ -148,29 +148,33 @@ Conclusions
 
 ### Section 3: Score
 
-This section shows the wine's score on the criteria that are considered for the gild's version of the 20-point scoring system. As the user completes the tasting evaluation, some criteria will automatically set the corresponding criteria in this section. Any criteria which haven't been evaluated yet will receive the default score. The user can manually set the score for each criteria or the overall score, and each item can be reset to the default. Once an item has been manually edited, it will not be automatically changed until it is reset to the default; for example, if a user has manually added 0.5 to the "nose open" score, and then modifies the "nose intensity" evaluation in the previous section, that latter update won't override the manual score.
+This section shows the wine's score along the criteria that are considered for the gild's version of the 20-point scoring system. As the user completes the tasting evaluation in the previous section, some criteria will automatically set the corresponding criteria in this section. Any criteria which haven't been evaluated yet will receive the default score. The user can manually set the score for each criteria or the overall score, and each item can be reset to the default. Once an item has been manually edited, it will not be automatically changed until it is reset to the default; for example, if a user has manually added 0.5 to the "nose open" score, and then modifies the "nose intensity" evaluation in the previous section, that latter update won't override the manual score.
 
 The scoring interface details below outline the elements of the scoring interface. 
 
 The score criteria are grouped into categories (1-3). 
 
-Within each category is the scoring criteria (i, ii, etc) from which the final score is computed. For each criterion, bullet points list all the allowed scores along with their quality descriptors; these are the messages that are displayed when a user assigns a specific score, to help users pick an appropriate score for each criterion. Criteria scores can be adjusted with +/- buttons and reset to the default.
+Within each category is the scoring criteria (i, ii, etc) from which the final score is computed. For each criterion, bullet points list all the allowed scores along with their quality descriptors; these are the messages that are displayed when a user assigns a specific score, to help users pick an appropriate score for each criterion. Some criteria are automatically set from the evaluation in the previous section; these mappings are noted in the bullet points. Criteria scores can be adjusted with +/- buttons and reset to the default (as per the evaluation in the previous section, if available, or to the default value for each score).
 
 Lastly, the final score (4) is computed by adding all the criteria scores together. The final score can be manually adjusted with +/- buttons or reset to the default (as computed from the score criteria). Bullet points indicate the allowed values for the final score, and the quality descriptors displayed for each final score.
 
 #### Scoring interface details
 
 1. Appearance / *Voorkoms*
-   - 3: Default
-   - 2: Faulty / *Foutief*
+   1. Condition / *Toestand*
+      - 3: Default
+      - 2: Faulty / *Foutief*
+      - Automatically set from "appearance: clarity" -- if faulty, assign 2
 1. Nose / *Neus*
    1. Condition / *Toestand*
       - 1: Default
       - 0: Faulty / *Foutief*
+      - Automatically set from "nose: condition" -- if faulty, assign 0
    1. Open / *Oop*
       - 1: Default
       - 1.5: Very open / *Baie oop*
       - 2: Jumping out / *Sprint uit*
+      - Automatically set from "nose: intensity" -- 1.5 for "medium" to "medium+"; 2 for "heavy/full/pronounced"
    1. Aroma / *Aroma*
       - 1: Default
       - 1.5: Complex and/or good cultivar characteristics / *Kompleks en/of goeie kultivar kenmerke*
@@ -190,6 +194,7 @@ Lastly, the final score (4) is computed by adding all the criteria scores togeth
    1. Body / *Lyf*
       - 0.5: Default
       - 1: Very intense / *Baie intens*
+      - Automatically set from "palate: body" -- 1 for "heavy"
    1. Character / *Karakter*
       - 0.5: Default
       - 1: Markedly powerful, elegant, refined, etc. / *Merkbaar kragtig, elegant, verfynd, ens.*
@@ -197,6 +202,7 @@ Lastly, the final score (4) is computed by adding all the criteria scores togeth
       - 1: Default
       - 1.5: Extended / *Lank*
       - 2: Lingering / *Besonder lank*
+      - Automatically set from "palate: finish" -- 1.5 for "medium" to "medium+"; 2 for "long"
 1. Final score / *Finale punt*
    - 13 - 13.5: Ordinary / *Gewoon*
    - 14 - 14.5: Average; appealing / *Gemiddeld; aangenaam*
@@ -204,39 +210,3 @@ Lastly, the final score (4) is computed by adding all the criteria scores togeth
    - 16 - 17: Excellent; wine of distinction / *Uitstekend*
    - 17.5: Outstanding / *Besonders*
    - 18+: Superlative; top class; masterpiece / *Top klas; meesterlik*
-
-## Scoring logic
-
-A wine is scored out of 20 on a list of criteria, grouped into broad categories corresponding to those in the tasting guide. Each criterion has a default, non-zero score. When all criteria are given their default scores, the wine is considered average. Some criteria may be given a score below the default to indicate that the wine is faulty. Half-points or full points may be added to some criteria to indicate that the wine is above average or excellent with regards to those criteria.
-
-The list below shows the category groups with normal score ranges in brackets; the lower score is the default, and the higher score is the maximum possible. Faulty wines my score below the default scores.
-
-The sub-items for each category group are the individual criteria items from which scores are computed. Each item indicates its default score, and how the default should be modified according to certain evaluations. It also indicates how the score is auto-calculated from the user's evaluation in the tasting guide section.
-
-- Appearance (3): Default 3. Subtract 1 if appearance is faulty.  
-  Auto-computed from appearance clarity in evaluation: if user evaluated wine as "hazy (faulty)", subtract 1.
--Nose (4-7)
-  - Condition: Default 1. Can subtract 1 if condition is faulty.  
-    Auto-computed from nose condition.
-  - Open: Default 1. Add 0.5 if very open. Add 1 if jumping out.  
-    Auto-computed from nose intensity in evaluation: add 0.5 for "medium" to "medium+""; add 1 for "heavy/full/pronounced".
-  - Aroma: Default 1. Add 0.5 to 1 for complexity and exemplary cultivar characteristics.  
-    Not auto-computed.
-  - Bouquet: Default 1. Add 0.5 to 1 for complexity and notable wood influence.  
-    Not auto-computed.
-- Palate (7-10)
-  - Balance: Default 1. Subtract 1 if severely unbalanced. Add 0.5 if very well balanced.  
-    Not auto-computed.
-  - Complexity: Default 1. Add 0.5 if very complex.  
-    Not auto-computed.
-  - Body: Default 0.5. Add 0.5 if very heavy.  
-    Auto-computed from palate body: add 0.5 for "heavy".
-  - Character: Default 0.5. Add 0.5 if it is notably powerful, elegant, refined.  
-    Not auto-computed.
-  - Finish: Default 1. Add 0.5 if finish is extended. Add 1 if finish is lingering.  
-    Auto-computed from palate finish: Add 0.5 for "medium" to "medium +"; add 1 for "long".
-
-The user can tweak the score for each category within the allowed range. This allows for a more intuitive scoring in the event that they do not agree with the auto-calculated score.
-
-The user can also adjust the final score.
-
