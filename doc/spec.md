@@ -38,7 +38,7 @@ After this are more advanced fields:
 
 ### Section 2: Tasting guide / *Proegids*
 
-Criteria as per the WSET rubrik are shown here. The criteria are subdivided into categories for appearance, nose, palate, and conclusions. For most criteria, the user picks the one option which best describes the wine. For some options, marked "pick multiple", the user can pick any (or none). Some options, when selected, open a sub-menu with further options to refine the evaluation.
+Criteria as per the WSET rubrik are shown here. The criteria are subdivided into categories for appearance, nose, palate, and conclusions. For most criteria, the user picks the one option which best describes the wine. For some options, marked "pick multiple", the user can pick any (or none). Some options, when selected, open a sub-menu with further options to refine the evaluation. All options also have an "other" (*"ander"*) option, which lets the user enter a choice via a free text field.
 
 Appearance  
 *Voorkoms*
@@ -69,8 +69,10 @@ Nose
     *Indien foutief: gekurk, vlugtige suur, bret, alkoholies, ander*
 - Intensity: shy, light, medium-, medium, medium+, heavy/full/pronounced  
   *Intensiteit: skaam, lig, medium-, medium, medium+, swaar/vol/duidelik*
-- Aroma (pick multiple): floral, fruit, vegetal, spices, wood, malolactic fermentation  
-  *Aroma: blomme, vrugte, plantaardig, speserye, hout, malolaktiese gisting*    
+- Complexity: simple, somewhat complex, very complex  
+  *Kompleksiteit: eenvoudig, ietwat kompleks, baie kompleks*
+- Aroma (pick multiple): floral, fruit, vegetal, spices, mineralic, wood, malolactic fermentation  
+  *Aroma: blomme, vrugte, plantaardig, speserye, mineralerig, hout, malolaktiese gisting*    
   Picking a top-level aroma will open a menu for users to refine their evaluation, as below. For each, the user can pick multiple.  
   Primary
     - Floral: acacia, honeysuckle, lilies, malva, blossoms, rose, violet  
@@ -99,9 +101,11 @@ Nose
           *Kruie: Dille, vinkel, laventel, medisyne, ment, bloekom*
     - Spices: white pepper, black pepper, liquirice, smoked ham  
       *Speserye: witpeper, swartpeper, liquorice, gerookte spek*
+    - Mineralic: flint, petrichor  
+      *Mineralerig: vuursteen, petrichor
 
   Secondary
-    - Wood: vanilla, cloves, nutmeg, coconut, toffee (butterscotch), toast brea, cedar (pencil shavings), burnt wood, smoke, chocolate, coffee, resin  
+    - Wood: vanilla, cloves, nutmeg, coconut, toffee (butterscotch), toast bread, cedar (pencil shavings), burnt wood, smoke, chocolate, coffee, resin  
       *Hout: vanilla, naeltjies, neutmuskaat, klapper, toffie (butterscotch), roosterbrood, seder (potlood skaafsels) gebande hout, rook, sjokolade, koffie, harpuis*  
     - Malo (malalactic fermentation, MLF): butter, cheese, cream  
       *Melksuur (malolaktiese) gisting: botter, kaas, room*
@@ -124,8 +128,8 @@ Palate
   *Suiker: droog, af van droog, half droog, halfsoet, soet, volsoet*
 - Acidity: low, medium-, medium, medium+, high  
   *Suur: laag, medium-, medium, medium+, hoog*
-- Tanin level: soft, medium-, medium, medium+, hard  
-  *Tannien: sag, medium-, medium, medium+, hard*
+- Tanin level: absent, soft, medium-, medium, medium+, hard  
+  *Tannien: geen, sag, medium-, medium, medium+, hard*
 - Tanin nature: ripe, soft, smooth, unripe, green, coarse, stalky, chalky, fine-grained  
   *Karakter van tannien: ryp, sag, glad, onryp, groen, grof, takke, bordkryt, fyn*
 - Alcohol: low, medium-, medium, medium+, high  
@@ -136,6 +140,8 @@ Palate
   *Intensiteit van geure: flou, medium-, medium, medium+, intens*
 - Flavour characteristics (pick any): fruit driven, secondary flavours, bottle aging  
   *Geurprofiel vrug gedrewe, sekondêre geure, bottel veroudering*
+- Complexity: simple, somewhat complex, very complex  
+  *Kompleksiteit: eenvoudig, ietwat kompleks, baie kompleks*
 - Finish: short, medium-, medium, medium+, long  
   *Lengte van nasmaak: kort, medium-, medium, medium+, lank*
 
@@ -143,8 +149,12 @@ Conclusions
 *Gevolgtrekkings*
 - Quality: faulty, poor, acceptable, good, very good, excellent  
   *Kwaliteit: foutief, swak, aanvaarbaar, goed, baie goed, uitstekend*
-- Aging potential: too young, good now and can be aged, must be drank now, too old  
-  *Verouderingspotensiaal: Te jonk, drink nou maar kan verouder, drink nou, oor die muur*
+- Aging potential: too young, good now and will improve with age, good now and can be aged, must be drank now, too old  
+  *Verouderingspotensiaal: Te jonk, sal verbeter met veroudering, drink nou maar kan verouder, drink nou, oor die muur*
+  - If can be aged: how long to age in years  
+    *Hoeveel jare om te verouder*
+- Other notes (free text field)  
+  *Ander notas*
 
 ### Section 3: Score
 
